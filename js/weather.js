@@ -1,3 +1,15 @@
+
+// search by enter key hit 
+document.getElementById("input-field").addEventListener('keypress', event => {
+    const key = event.keyCode;
+    console.log(key);
+    if (key == 13) {
+        loadData();
+        console.log('Enter key pressed');
+    }
+})
+
+
 const loadData = () => {
     const inputField = document.getElementById('input-field');
     const inputFieldText = inputField.value;
